@@ -48,13 +48,12 @@ client.on('message', (message) => {
     if (command === 'deny') {
         if (!message.member.hasPermission('MANAGE_GUILD')) return message.reply('You need the `MANAGE_GUILD` Permissions!');
         var search = `ticket-${args[0]}`
-        var channel = message.guild.channels.find('name', search)
+        var channel = message.guild.channels.find(c => c.name === search)
 
         if (!channel) return message.reply('No Channel was Found!');
 
         channel.setName(`denied-${args[0]}`);
         message.channel.send(`Denied ticket Number: \`${args[0]}\``);
-        console.log(channel)
     }
 
     if (command === 'maxtickets') {
