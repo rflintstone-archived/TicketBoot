@@ -24,6 +24,8 @@ client.on('message', (message) => {
     const settings = db.get(message.guild.id);
     const userSettings = db.get(message.author.id);
 
+    if (!message.content.startsWith(client.config.prefix)) return;
+  
     const args = message.content.slice(client.config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
