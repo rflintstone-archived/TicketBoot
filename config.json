@@ -1,0 +1,11 @@
+{
+    "token": "",
+    "prefix": "-",
+    "ticket": {
+        "tickets": 0
+    },
+    "user": {
+        "tickets": 0,
+        "maxTickets": 1
+    }
+}
