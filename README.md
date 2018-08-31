@@ -6,5 +6,5 @@ This Bot allows you to Handle Tickets easily for your Discord!
 
 How to Install:  
 Place your bot token on `config.json` file  
-Run: `npm install discord.js enmap enmap-level`  
-After that, type: `node .` to start
+Run: `npm install eris enmap@3.1.4 enmap-level`  
+After that, type: `node app` or `node app.js` to start
