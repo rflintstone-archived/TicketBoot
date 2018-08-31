@@ -9,6 +9,8 @@ module.exports.run = (client, message) => {
         client.db.set(`${message.channel.guild.id}-${message.author.id}`, client.config.user);
     };
 
+    if (message.content.indexOf(client.config.prefix) !== 0) return;
+    
     const args = message.content.slice(client.config.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     const level = client.permlevel(message);
