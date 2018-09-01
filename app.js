@@ -11,13 +11,13 @@ client.db = new Enmap({ provider: new EnmapLevel({ name: 'TicketBoot' })});
 
 client.permlevel = (message) => {
     let permlevel = 0;
-    if (message.channel.guild.members.has('manageMessage')) permlevel = 1
+    if (message.member.permission.has('manageMessage')) permlevel = 1
 
-    if (message.channel.guild.members.has('kickMembers')) permlevel = 2;
+    if (message.member.permission.has('kickMembers')) permlevel = 2;
 
-    if (message.channel.guild.members.has('banMembers')) permlevel = 3;
+    if (message.member.permission.has('banMembers')) permlevel = 3;
 
-    if (message.channel.guild.members.has('administrator')) permlevel = 4;
+    if (message.member.permission.has('administrator')) permlevel = 4;
 
     if (message.author.id === message.channel.guild.ownerID) permlevel = 5;
 
